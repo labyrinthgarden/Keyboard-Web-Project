@@ -1,0 +1,71 @@
+.home-dark {
+  background: linear-gradient(135deg, #181c24 0%, #23283b 100%);
+}
+.text-gradient {
+  background: linear-gradient(90deg, #7f5af0 0%, #2cb67d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.bg-gradient-dark {
+  background: linear-gradient(135deg, #23283b 0%, #181c24 100%);
+}
+.text-accent {
+  color: #7f5af0 !important;
+}
+.btn-accent {
+  background: linear-gradient(90deg, #7f5af0 0%, #2cb67d 100%);
+  color: #fff;
+  border: none;
+}
+.btn-accent:hover {
+  background: linear-gradient(90deg, #2cb67d 0%, #7f5af0 100%);
+  color: #fff;
+}
+.text-light-50 {
+  color: rgba(255,255,255,0.5) !important;
+}
+.home-dark {
+  min-height: 100vh;
+}
+.home-dark header {
+  border-bottom: 1.5px solid #2cb67d;
+  margin-bottom: 2rem;
+}
+.home-dark h1 {
+  font-size: 2.8rem;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 12px #7f5af022;
+}
+.home-dark .card {
+  background: linear-gradient(135deg, #23283b 0%, #181c24 100%);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 32px 0 rgba(44,182,125,0.08), 0 1.5px 6px 0 rgba(127,90,240,0.12);
+  border: none;
+  padding: 2em 1.5em;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.home-dark .card:hover {
+  box-shadow: 0 8px 48px 0 rgba(44,182,125,0.18), 0 3px 12px 0 rgba(127,90,240,0.22);
+  transform: translateY(-4px) scale(1.02);
+}
+.home-dark .btn-accent {
+  background: linear-gradient(90deg, #7f5af0 0%, #2cb67d 100%);
+  color: #fff;
+  border: none;
+  border-radius: 2em;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(44,182,125,0.12);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.home-dark .btn-accent:hover {
+  background: linear-gradient(90deg, #2cb67d 0%, #7f5af0 100%);
+  box-shadow: 0 4px 16px rgba(127,90,240,0.18);
+}
+.home-dark .text-accent {
+  color: #7f5af0 !important;
+}
+.home-dark .text-light-50 {
+  color: rgba(255,255,255,0.5) !important;
+}

@@ -1,0 +1,11 @@
+/* Estilos oscuros y modernos para Footer */
+.footer-dark {
+  background: linear-gradient(90deg, #181c24 0%, #23283b 100%);
+  border-top: 1.5px solid #7f5af0;
+  box-shadow: 0 -2px 16px 0 rgba(127,90,240,0.10);
+}
+.footer-dark span {
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  text-shadow: 0 1px 4px #7f5af022;
+}

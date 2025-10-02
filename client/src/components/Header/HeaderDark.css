@@ -1,0 +1,10 @@
+.header-dark {
+  background: linear-gradient(90deg, #23283b 0%, #181c24 100%);
+  border-bottom: 1px solid #2cb67d;
+}
+.text-gradient {
+    background: linear-gradient(90deg, #7f5af0 0%, #2cb67d 100%);
+    background-clip: text;
+    color: transparent;
+    font: Arial, sans-serif;
+}
