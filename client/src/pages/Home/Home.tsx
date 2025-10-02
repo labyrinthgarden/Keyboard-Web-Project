@@ -43,25 +43,37 @@ const Home: React.FC = () => {
                 ) : error ? (
                     <div className="alert alert-danger text-center my-5">{error}</div>
                 ) : (
-                    <section className="row g-4 justify-content-center">
+                    <div className="row row-cols-1 row-cols-md-3 g-4">
                         {keyboards.map((kb) => (
-                            <div key={kb.name} className="col-12 col-md-4 d-flex">
-                                <div className="card w-100 bg-gradient-dark border-0 shadow-lg">
+                            <div key={kb.name} className="col">
+                                <div className="card h-100 bg-gradient-dark border-0 shadow-lg">
                                     <img
                                         src={kb.image}
                                         alt={kb.name}
-                                        className="card-img-top rounded-top"
+                                        className="card-img-top"
                                         style={{ height: "200px", objectFit: "cover", filter: "brightness(0.85)" }}
                                     />
-                                    <div className="card-body text-center">
+                                    <div className="card-body d-flex flex-column text-center">
                                         <h2 className="h5 fw-semibold mb-2 text-light">{kb.name}</h2>
-                                        <span className="h6 fw-bold text-accent mb-3 d-block">{kb.price}</span>
-                                        <button className="btn btn-accent px-4 py-2 rounded-pill shadow-sm">Shop Now</button>
+                                        <span className="h6 fw-bold text-accent mb-3">{kb.price}</span>
+                                        <button
+                                            className="btn btn-accent px-4 py-2 rounded-pill shadow-sm"
+                                            onClick={async () => {
+                                                const isLoggedIn = await import('../../utils/auth').then(auth => auth.isLoggedIn());
+                                                if (!isLoggedIn) {
+                                                    window.location.href = '/login';
+                                                } else {
+                                                    alert('Proceed to shop!');
+                                                }
+                                            }}
+                                        >
+                                            Shop Now
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         ))}
-                    </section>
+                    </div>
                 )}
             </main>
             <footer className="mt-5 py-4 text-center text-light-50 small border-top border-secondary">

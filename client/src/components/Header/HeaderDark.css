@@ -1,10 +1,17 @@
 .header-dark {
-  background: linear-gradient(90deg, #23283b 0%, #181c24 100%);
-  border-bottom: 1px solid #2cb67d;
+  background: linear-gradient(90deg, #1c1f2b 0%, #0f1218 100%);
+  border-bottom: 1.5px solid #2cb67d;
+  box-shadow: 0 2px 8px rgba(44, 182, 125, 0.1);
+  padding: 1rem 0;
 }
 .text-gradient {
     background: linear-gradient(90deg, #7f5af0 0%, #2cb67d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-    font: Arial, sans-serif;
+    font-family: 'Iosevka', 'monospace';
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-shadow: 0 2px 8px rgba(127, 90, 240, 0.3);
 }

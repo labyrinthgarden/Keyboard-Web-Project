@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 
 const JWT_SECRET = 'secreto';
 const app = express();
+const { expressjwt: jwtMiddleware } = require('express-jwt');
 const port = 3000;
 
 app.use(cors({ origin: '*' }));
@@ -26,22 +27,56 @@ app.post('/login', (req, res) => {
   return res.json({ token });
 });
 
+app.post('/verify-token', jwtMiddleware({ secret: JWT_SECRET, algorithms: ['HS256'] }), (req, res) => {
+  res.json({ valid: true });
+});
+
 app.get('/keyboards', (req, res) => {
   const keyboards = [
     {
       name: "Mechanical Pro X",
       price: "$129",
-      image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80",
+      image: "https://images.pexels.com/photos/5393415/pexels-photo-5393415.jpeg",
     },
     {
       name: "RGB Gamer",
       price: "$99",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80",
+      image: "https://images.pexels.com/photos/15774453/pexels-photo-15774453.jpeg",
     },
     {
       name: "Minimalist Wireless",
       price: "$89",
-      image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+      image: "https://images.pexels.com/photos/532173/pexels-photo-532173.jpeg",
+    },
+    {
+      name: "Compact Pro",
+      price: "$119",
+      image: "https://images.pexels.com/photos/722675/pexels-photo-722675.jpeg",
+    },
+    {
+      name: "Ergo Split",
+      price: "$149",
+      image: "https://images.pexels.com/photos/4065710/pexels-photo-4065710.jpeg",
+    },
+    {
+      name: "Silent Touch",
+      price: "$79",
+      image: "https://images.pexels.com/photos/8875612/pexels-photo-8875612.jpeg",
+    },
+    {
+      name: "Gaming Beast",
+      price: "$199",
+      image: "https://images.pexels.com/photos/4065748/pexels-photo-4065748.jpeg",
+    },
+    {
+      name: "Ultra Thin",
+      price: "$69",
+      image: "https://images.pexels.com/photos/1772123/pexels-photo-1772123.jpeg?auto=compress&cs=tinysrgb&w=400",
+    },
+    {
+      name: "Classic Retro",
+      price: "$109",
+      image: "https://images.pexels.com/photos/32664038/pexels-photo-32664038.jpeg",
     },
   ];
   res.json(keyboards);
