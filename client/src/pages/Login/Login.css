@@ -14,7 +14,7 @@
 
 .form-control {
     background-color: transparent;
-    color: rgba(255, 255, 255, 0.8);
+    color: #fff !important;
     font-weight: 600;
     letter-spacing: 0.03em;
     margin-bottom: 0.5rem;
@@ -25,9 +25,10 @@
 
 .form-control:focus {
     background-color: transparent;
+    color: #fff !important;
     outline: solid white 1px !important;
     border-bottom: white;
-    /*box-shadow: 0 0 0 0.2rem rgba(127, 90, 240, 0.25);;*/
+    box-shadow: 0 0 0 0.2rem rgba(127, 90, 240, 0.25);;
 }
 
 .card {

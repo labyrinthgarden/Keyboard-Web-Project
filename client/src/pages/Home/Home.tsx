@@ -63,7 +63,7 @@ const Home: React.FC = () => {
                                                 if (!isLoggedIn) {
                                                     window.location.href = '/login';
                                                 } else {
-                                                    alert('Proceed to shop!');
+                                                    window.location.href = '/shop';
                                                 }
                                             }}
                                         >

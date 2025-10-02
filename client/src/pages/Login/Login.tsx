@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { setToken, isLoggedIn } from '../../utils/auth';
 import './Login.css';
 
 const Login: React.FC = () => {
@@ -7,6 +8,12 @@ const Login: React.FC = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    isLoggedIn().then((logged) => {
+      if (logged) navigate('/shop');
+    });
+  }, [navigate]);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,8 +30,8 @@ const Login: React.FC = () => {
       }
 
       const { token } = await response.json();
-      localStorage.setItem('token', token);
-      navigate('/');
+      setToken(token);
+      navigate('/shop');
     } catch (err: any) {
       setError(err.message);
     }

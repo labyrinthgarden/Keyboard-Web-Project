@@ -1,0 +1,96 @@
+.shop-page {
+  background: linear-gradient(135deg, #0f1218 0%, #1c1f2b 100%);
+  color: #d1d5db;
+  font-family: 'Iosevka', 'Iosevka Nerd Font', 'Fira Code', 'JetBrains Mono', 'monospace';
+  min-height: 100vh;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #7f5af0 0%, #2cb67d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 8px rgba(127, 90, 240, 0.3);
+}
+
+.bg-gradient-dark {
+  background: linear-gradient(135deg, #23283b 0%, #181c24 100%);
+  border: 1px solid rgba(127, 90, 240, 0.2);
+  box-shadow: 0 4px 32px 0 rgba(44,182,125,0.08), 0 1.5px 6px 0 rgba(127,90,240,0.12);
+}
+
+.text-accent {
+  color: #7f5af0 !important;
+}
+
+.btn-accent {
+  background: linear-gradient(90deg, #7f5af0 0%, #2cb67d 100%);
+  color: #fff;
+  border: none;
+  border-radius: 2em;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(44,182,125,0.12);
+  transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.btn-accent:hover {
+  background: linear-gradient(90deg, #2cb67d 0%, #7f5af0 100%);
+  box-shadow: 0 4px 16px rgba(127,90,240,0.18);
+  transform: scale(1.05);
+}
+
+.text-light-50 {
+  color: rgba(255,255,255,0.5) !important;
+}
+
+.shop-page header {
+  border-bottom: 1.5px solid #2cb67d;
+  margin-bottom: 2rem;
+}
+
+.shop-page h1 {
+  font-size: 2.8rem;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 12px #7f5af022;
+}
+
+.shop-page .card {
+  background: linear-gradient(135deg, #23283b 0%, #181c24 100%);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 32px 0 rgba(44,182,125,0.08), 0 1.5px 6px 0 rgba(127,90,240,0.12);
+  border: none;
+  padding: 2em 1.5em;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.shop-page .card:hover {
+  box-shadow: 0 8px 48px 0 rgba(44,182,125,0.18), 0 3px 12px 0 rgba(127,90,240,0.22);
+  transform: translateY(-4px) scale(1.02);
+  border-color: rgba(127, 90, 240, 0.5);
+}
+
+.shop-page .btn-accent {
+  background: linear-gradient(90deg, #7f5af0 0%, #2cb67d 100%);
+  color: #fff;
+  border: none;
+  border-radius: 2em;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(44,182,125,0.12);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.shop-page .btn-accent:hover {
+  background: linear-gradient(90deg, #2cb67d 0%, #7f5af0 100%);
+  box-shadow: 0 4px 16px rgba(127,90,240,0.18);
+  transform: scale(1.05);
+}
+
+.shop-page .text-accent {
+  color: #7f5af0 !important;
+}
+
+.shop-page .text-light-50 {
+  color: rgba(255,255,255,0.5) !important;
+}

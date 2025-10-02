@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Iosevka:wght@400;700&display=swap');
+@font-face {
+  font-family: 'Iosevka';
+  src: url('./assets/fonts/iosevka-latin-700-italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 body, .app-dark {
   min-height: 100vh;
@@ -12,6 +18,7 @@ body, .app-dark {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    color:white;
   font-family: inherit;
   font-weight: 700;
   letter-spacing: 0.02em;
